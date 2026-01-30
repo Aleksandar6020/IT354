@@ -37,10 +37,10 @@
       "name": "Name",
       "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Manul_close.jpg",
       "shortDescription": "Short ",
-      "longStory": "long",
+      "longStory": "long\n\n[Approved story] body is round",
       "locationType": "ZOO",
       "region": "here",
-      "likesCount": 1,
+      "likesCount": 2,
       "favoritesCount": 0,
       "createdAt": "2026-01-30",
       "id": 3
@@ -108,6 +108,22 @@
       "type": "LIKE",
       "createdAt": "2026-01-30T06:15:12.055Z",
       "id": 4
+    },
+    {
+      "userId": 2,
+      "manulId": 3,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T06:25:42.774Z",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "manulId": 3,
+      "type": "STORY",
+      "content": "body is round",
+      "status": "APPROVED",
+      "createdAt": "2026-01-30T06:25:43.440Z",
+      "id": 6
     }
   ]
 }

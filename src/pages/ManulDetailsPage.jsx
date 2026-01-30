@@ -7,6 +7,7 @@ function ManulDetailsPage() {
   const { currentUser } = useContext(AuthContext)
   const [manul, setManul] = useState(null)
   const [liked, setLiked] = useState(false)
+  const [suggestionText, setSuggestionText] = useState('')
 
   useEffect(() => {
     const loadManul = async () => {
@@ -56,6 +57,35 @@ function ManulDetailsPage() {
     }
   }
 
+  const handleSuggestionSubmit = async (event) => {
+    event.preventDefault()
+
+    if (!currentUser) {
+      alert('Login required')
+      return
+    }
+
+    const response = await fetch('http://localhost:3001/suggestions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userId: currentUser.id,
+        manulId: Number(id),
+        type: 'STORY',
+        content: suggestionText,
+        status: 'PENDING',
+        createdAt: new Date().toISOString(),
+      }),
+    })
+
+    if (response.ok) {
+      setSuggestionText('')
+      alert('Suggestion sent')
+    }
+  }
+
   return (
     <div className="container">
       {!manul ? (
@@ -73,6 +103,19 @@ function ManulDetailsPage() {
               </button>
             </div>
           </div>
+          <h2>Suggest a story</h2>
+          <form className="form" onSubmit={handleSuggestionSubmit}>
+            <div className="formRow">
+              <label className="label">Your story</label>
+              <textarea
+                className="input"
+                value={suggestionText}
+                onChange={(e) => setSuggestionText(e.target.value)}
+                required
+              />
+            </div>
+            <button className="button" type="submit">Submit suggestion</button>
+          </form>
         </>
       )}
     </div>

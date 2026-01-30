@@ -13,6 +13,7 @@ function AdminPage() {
   const [manuls, setManuls] = useState([])
   const [form, setForm] = useState(emptyForm)
   const [editingId, setEditingId] = useState(null)
+  const [suggestions, setSuggestions] = useState([])
 
   const loadManuls = async () => {
     const response = await fetch('http://localhost:3001/manuls')
@@ -20,8 +21,15 @@ function AdminPage() {
     setManuls(data)
   }
 
+  const loadSuggestions = async () => {
+    const response = await fetch('http://localhost:3001/suggestions?type=STORY')
+    const data = await response.json()
+    setSuggestions(data)
+  }
+
   useEffect(() => {
     loadManuls()
+    loadSuggestions()
   }, [])
 
   const handleChange = (event) => {
@@ -90,6 +98,49 @@ function AdminPage() {
     const created = await response.json()
     setManuls((prev) => [...prev, created])
     setForm(emptyForm)
+  }
+
+  const handleReject = async (suggestion) => {
+    const response = await fetch(`http://localhost:3001/suggestions/${suggestion.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ status: 'REJECTED' }),
+    })
+
+    if (response.ok) {
+      const updated = await response.json()
+      setSuggestions((prev) => prev.map((s) => (s.id === updated.id ? updated : s)))
+    }
+  }
+
+  const handleApprove = async (suggestion) => {
+    const response = await fetch(`http://localhost:3001/suggestions/${suggestion.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ status: 'APPROVED' }),
+    })
+
+    if (!response.ok) return
+
+    const updatedSuggestion = await response.json()
+    const manulResponse = await fetch(`http://localhost:3001/manuls/${suggestion.manulId}`)
+    const manul = await manulResponse.json()
+    const currentStory = manul.longStory || ''
+    const updatedLongStory = `${currentStory}\n\n[Approved story] ${suggestion.content}`
+
+    await fetch(`http://localhost:3001/manuls/${suggestion.manulId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ longStory: updatedLongStory }),
+    })
+
+    setSuggestions((prev) => prev.map((s) => (s.id === updatedSuggestion.id ? updatedSuggestion : s)))
   }
 
   return (
@@ -173,6 +224,38 @@ function AdminPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      <h2>Moderation</h2>
+      <div className="table">
+        {suggestions
+          .filter((s) => s.status === 'PENDING')
+          .map((suggestion) => (
+            <div className="row" key={suggestion.id}>
+              <div className="rowMain">
+                <strong>#{suggestion.id}</strong> | user: {suggestion.userId} | manul: {suggestion.manulId}
+                <div>status: {suggestion.status}</div>
+                <div>{suggestion.content}</div>
+                <div>{suggestion.createdAt}</div>
+              </div>
+              <div className="rowActions">
+                <button
+                  className="button"
+                  type="button"
+                  onClick={() => handleApprove(suggestion)}
+                >
+                  Approve
+                </button>
+                <button
+                  className="button buttonSecondary"
+                  type="button"
+                  onClick={() => handleReject(suggestion)}
+                >
+                  Reject
+                </button>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
   )
