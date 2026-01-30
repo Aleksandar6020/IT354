@@ -13,7 +13,7 @@
         "zoo",
         "popular"
       ],
-      "likesCount": 15,
+      "likesCount": 16,
       "favoritesCount": 5,
       "createdAt": "2024-01-10"
     },
@@ -201,6 +201,41 @@
       "type": "LIKE",
       "createdAt": "2026-01-30T07:11:51.130Z",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:44:57.493Z",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:44:59.011Z",
+      "id": 19
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:45:11.042Z",
+      "id": 20
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:45:11.353Z",
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:45:12.016Z",
+      "id": 22
     }
   ]
 }
