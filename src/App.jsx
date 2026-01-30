@@ -9,6 +9,7 @@ import ManulDetailsPage from './pages/ManulDetailsPage.jsx'
 import AdminPage from './pages/AdminPage.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
