@@ -10,10 +10,8 @@ function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    if (!email.includes('@') || email.startsWith('@') || email.endsWith('@')) {
-      alert('Invalid email format')
-      return
-    }
+
+
     const query = `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
     const response = await fetch(`http://localhost:3001/users?${query}`)
     const users = await response.json()
@@ -29,28 +27,43 @@ function LoginPage() {
   return (
     <div className="container">
       <h1>Login</h1>
+
       <form className="form" onSubmit={handleSubmit}>
         <div className="formRow">
-          <label className="label">Email</label>
+          <label className="label" htmlFor="login-email">
+            Email
+          </label>
           <input
+            id="login-email"
+            name="email"
             className="input"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="email"
           />
         </div>
+
         <div className="formRow">
-          <label className="label">Password</label>
+          <label className="label" htmlFor="login-password">
+            Password
+          </label>
           <input
+            id="login-password"
+            name="password"
             className="input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
         </div>
-        <button className="button" type="submit">Login</button>
+
+        <button className="button" type="submit">
+          Login
+        </button>
       </form>
     </div>
   )
