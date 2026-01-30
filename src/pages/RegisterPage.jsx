@@ -8,7 +8,16 @@ function RegisterPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    if (!email.includes('@') || email.startsWith('@') || email.endsWith('@')) {
+      alert('Email must contain @ in the middle')
+      return
+    }
 
+    const atIndex = email.indexOf('@')
+    if (!email.slice(atIndex).includes('.')) {
+      alert('Email must contain a dot after @')
+      return
+    }
     const response = await fetch('http://localhost:3001/users', {
       method: 'POST',
       headers: {

@@ -10,7 +10,10 @@ function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-
+    if (!email.includes('@') || email.startsWith('@') || email.endsWith('@')) {
+      alert('Invalid email format')
+      return
+    }
     const query = `email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
     const response = await fetch(`http://localhost:3001/users?${query}`)
     const users = await response.json()
