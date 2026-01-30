@@ -1,0 +1,94 @@
+{
+  "manuls": [
+    {
+      "id": 1,
+      "name": "Batu",
+      "photoUrl": "https://manulization.com/wp-content/uploads/2020/05/manul-batu.jpg",
+      "shortDescription": "A famous Pallas’s cat known for his grumpy expression.",
+      "longStory": "Batu is one of the most recognizable manuls, famous for his expressive face and calm behavior. Like all Pallas’s cats, he prefers solitude and rocky habitats=)",
+      "locationType": "ZOO",
+      "zooId": 1,
+      "region": "",
+      "tags": [
+        "zoo",
+        "popular"
+      ],
+      "likesCount": 14,
+      "favoritesCount": 5,
+      "createdAt": "2024-01-10"
+    },
+    {
+      "id": 2,
+      "name": "Wild Manul",
+      "photoUrl": "https://manulization.com/wp-content/uploads/2019/12/pallas-cat-wild.jpg",
+      "shortDescription": "A wild Pallas’s cat from the Mongolian steppes.",
+      "longStory": "Wild manuls inhabit cold grasslands and rocky steppes of Central Asia. They are excellent hunters but very sensitive to environmental changes.",
+      "locationType": "WILD",
+      "zooId": null,
+      "region": "Mongolia",
+      "tags": [
+        "wild"
+      ],
+      "likesCount": 20,
+      "favoritesCount": 8,
+      "createdAt": "2024-02-01"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@manuls.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "user@manuls.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "email": "admin@manuls.com",
+      "password": "admin123",
+      "id": 3
+    },
+    {
+      "email": "user@manuls.com",
+      "password": "user123",
+      "id": 4
+    },
+    {
+      "email": "test@test.test",
+      "password": "е",
+      "id": 5
+    },
+    {
+      "email": "user@manuls.com",
+      "password": "user123",
+      "id": 6
+    }
+  ],
+  "suggestions": [
+    {
+      "userId": 2,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T05:36:07.110Z",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T05:36:08.357Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T05:36:58.158Z",
+      "id": 3
+    }
+  ]
+}
