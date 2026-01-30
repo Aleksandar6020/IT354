@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Batu",
-      "photoUrl": "https://manulization.com/wp-content/uploads/2020/05/manul-batu.jpg",
+      "photoUrl": "https://cdn.manulization.com/images/cPpAPBjIVjOvwitg_mar-1_mw-600.webp",
       "shortDescription": "A famous Pallas’s cat known for his grumpy expression.",
       "longStory": "Batu is one of the most recognizable manuls, famous for his expressive face and calm behavior. Like all Pallas’s cats, he prefers solitude and rocky habitats=)",
       "locationType": "ZOO",
@@ -20,7 +20,7 @@
     {
       "id": 2,
       "name": "Wild Manul",
-      "photoUrl": "https://manulization.com/wp-content/uploads/2019/12/pallas-cat-wild.jpg",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Manoel.jpg",
       "shortDescription": "A wild Pallas’s cat from the Mongolian steppes.",
       "longStory": "Wild manuls inhabit cold grasslands and rocky steppes of Central Asia. They are excellent hunters but very sensitive to environmental changes.",
       "locationType": "WILD",
@@ -29,21 +29,99 @@
       "tags": [
         "wild"
       ],
-      "likesCount": 21,
+      "likesCount": 22,
       "favoritesCount": 8,
       "createdAt": "2024-02-01"
     },
     {
-      "name": "Name",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Manul_close.jpg",
-      "shortDescription": "Short ",
-      "longStory": "long\n\n[Approved story] body is round",
+      "id": 3,
+      "name": "Arkas",
+      "photoUrl": "https://cdn.manulization.ru/images/8jdAvFBQCGfAInr8_mw-1024.webp",
+      "shortDescription": "Bohus and Borsika’s son, living at Korkeasaari Zoo (Helsinki).",
+      "longStory": "Arkas was born on March 23, 2022 at Budapest Zoo & Botanical Garden. He lives in Korkeasaari Zoo in an area called Cat Valley; his enclosure is usually not open to the public, so you can mostly spot him in early spring during the mating season when he visits Mimi.",
       "locationType": "ZOO",
-      "region": "here",
-      "likesCount": 2,
+      "zooId": null,
+      "region": "Helsinki, Finland",
+      "tags": [
+        "zoo",
+        "korkeasaari",
+        "helsinki"
+      ],
+      "likesCount": 1,
       "favoritesCount": 0,
-      "createdAt": "2026-01-30",
-      "id": 3
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": 4,
+      "name": "Mimi",
+      "photoUrl": "https://cdn.manulization.ru/images/HzS5sYiODCJ9ldZg_mw-1024.webp",
+      "shortDescription": "Norbu and Pema’s daughter, living at Korkeasaari Zoo (Helsinki).",
+      "longStory": "Mimi was born on June 25, 2019 at Chemnitz Zoo. She lives in Korkeasaari Zoo and is known there as the resident lady of the manul pair; in spring she is visited by Arkas for a short mating-season stay.",
+      "locationType": "ZOO",
+      "zooId": null,
+      "region": "Helsinki, Finland",
+      "tags": [
+        "zoo",
+        "korkeasaari",
+        "helsinki"
+      ],
+      "likesCount": 0,
+      "favoritesCount": 0,
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": 5,
+      "name": "Innokentiy (Kesha)",
+      "photoUrl": "https://cdn.manulization.ru/images/rcSqdrqXMVhCTYPV_mw-1024.webp",
+      "shortDescription": "Karaganda and Markiza’s son, living at the Center for the Reproduction of Rare Species of Animals.",
+      "longStory": "Innokentiy was born on April 1, 2015 at Novosibirsk Zoo. He received the name “Innokentiy” at the Center for the Reproduction of Rare Species of Animals, while “Kesha” is his nickname.",
+      "locationType": "ZOO",
+      "zooId": null,
+      "region": "Russia",
+      "tags": [
+        "zoo",
+        "russia",
+        "novosibirsk"
+      ],
+      "likesCount": 1,
+      "favoritesCount": 0,
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": 6,
+      "name": "Bohus",
+      "photoUrl": "https://cdn.manulization.ru/images/Wue2TFb9nRH8Z1j6_mw-1024.webp",
+      "shortDescription": "Norbu and Pema’s son, living at Budapest Zoo & Botanical Garden.",
+      "longStory": "Bohus was born on May 30, 2018 at Chemnitz Zoo. Today he lives at Budapest Zoo & Botanical Garden; he is the father of Arkas and is one of the best-known manuls in Budapest.",
+      "locationType": "ZOO",
+      "zooId": null,
+      "region": "Budapest, Hungary",
+      "tags": [
+        "zoo",
+        "budapest",
+        "hungary"
+      ],
+      "likesCount": 0,
+      "favoritesCount": 0,
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": 7,
+      "name": "Jihl",
+      "photoUrl": "https://cdn.manulization.ru/images/rim0xk7rT4DqsxGj_mw-1024.webp",
+      "shortDescription": "Chipie (b. 2020) and Rgasha’s daughter, living in Paris.",
+      "longStory": "Jihl was born on May 20, 2022 at Jihlava Zoo. She now lives at the Ménagerie du Jardin des plantes (Paris) and is often described as a charming young manul from the Jihlava line.",
+      "locationType": "ZOO",
+      "zooId": null,
+      "region": "Paris, France",
+      "tags": [
+        "zoo",
+        "paris",
+        "france"
+      ],
+      "likesCount": 0,
+      "favoritesCount": 0,
+      "createdAt": "2026-01-30"
     }
   ],
   "users": [
@@ -236,6 +314,27 @@
       "type": "LIKE",
       "createdAt": "2026-01-30T07:45:12.016Z",
       "id": 22
+    },
+    {
+      "userId": 1,
+      "manulId": 5,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T08:08:53.745Z",
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T08:09:09.196Z",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "manulId": 3,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T08:09:16.329Z",
+      "id": 25
     }
   ]
 }

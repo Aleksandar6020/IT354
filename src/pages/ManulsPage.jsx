@@ -52,6 +52,11 @@ function ManulsPage() {
       <div className="cardGrid">
         {manuls.map((m) => (
           <div key={m.id} className="card">
+            <img
+              className="cardImage"
+              src={m.photoUrl}
+              alt={m.name}
+            />
             <h3>{m.name}</h3>
             <p>{m.shortDescription}</p>
             <Link className="button" to={`/manuls/${m.id}`}>
