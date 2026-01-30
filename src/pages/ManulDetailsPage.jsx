@@ -97,10 +97,18 @@ function ManulDetailsPage() {
             <img className="detailsImage" src={manul.photoUrl} alt={manul.name} />
             <div className="detailsBody">
               <p>{manul.longStory}</p>
-              <p>Likes: {manul.likesCount}</p>
-              <button className="button" type="button" onClick={handleLike}>
-                {liked ? 'Unlike' : 'Like'}
-              </button>
+                <div className="likeRow">
+                  <span className="likeBadge" title="Likes">{manul.likesCount}</span>
+                    <button
+                      className={`button likeButton ${liked ? 'likeButtonActive' : ''}`}
+                      type="button"
+                      onClick={handleLike}
+                      aria-label={liked ? 'Unlike' : 'Like'}
+                      title={liked ? 'Unlike' : 'Like'}
+                    >
+                        {liked ? '♥' : '♡'}
+                    </button>
+                </div>
             </div>
           </div>
           <h2>Suggest a story</h2>

@@ -138,6 +138,13 @@ p {
   font-size: 14px;
   font-family: inherit;
   background: #ffffff;
+  width: 100%;
+  max-width: 100%;
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 110px;
 }
 
 .input:focus {
@@ -202,6 +209,42 @@ p {
 
 .rowMain {
   font-size: 14px;
+}
+
+.likeRow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.likeBadge {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #efeae2;
+    border: 1px solid #e6e1d9;
+    font-weight: 700;
+    font-size: 14px;
+    flex: 0 0 auto;
+}
+
+.likeButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.likeButtonActive {
+    background: #244f31;
+    border-color: #244f31;
 }
 
 @media (max-width: 900px) {

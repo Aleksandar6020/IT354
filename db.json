@@ -13,7 +13,7 @@
         "zoo",
         "popular"
       ],
-      "likesCount": 14,
+      "likesCount": 15,
       "favoritesCount": 5,
       "createdAt": "2024-01-10"
     },
@@ -29,7 +29,7 @@
       "tags": [
         "wild"
       ],
-      "likesCount": 20,
+      "likesCount": 21,
       "favoritesCount": 8,
       "createdAt": "2024-02-01"
     },
@@ -124,6 +124,83 @@
       "status": "APPROVED",
       "createdAt": "2026-01-30T06:25:43.440Z",
       "id": 6
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T06:54:21.712Z",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:08:56.942Z",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:08:59.233Z",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:09:00.136Z",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:09:11.027Z",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:09:59.389Z",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:10:00.828Z",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:10:01.502Z",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "manulId": 1,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:10:01.929Z",
+      "id": 15
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:11:47.205Z",
+      "id": 16
+    },
+    {
+      "userId": 2,
+      "manulId": 2,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T07:11:51.130Z",
+      "id": 17
     }
   ]
 }
