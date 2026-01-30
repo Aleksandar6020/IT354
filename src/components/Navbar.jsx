@@ -12,25 +12,32 @@ function Navbar() {
   }
 
   return (
-    <nav>
-      <Link to="/">Home</Link> | <Link to="/manuls">Manuls</Link>
-      {!currentUser && (
-        <>
-          {' '}| <Link to="/login">Login</Link> |{' '}
-          <Link to="/register">Register</Link>
-        </>
-      )}
-      {currentUser && role === 'admin' && (
-        <>
-          {' '}| <Link to="/admin">Admin</Link> |{' '}
-          <button type="button" onClick={handleLogout}>Logout</button>
-        </>
-      )}
-      {currentUser && role === 'user' && (
-        <>
-          {' '}| <button type="button" onClick={handleLogout}>Logout</button>
-        </>
-      )}
+    <nav className="navbar">
+      <div className="container navbarInner">
+        <div className="navLinks">
+          <Link to="/">Home</Link>
+          <Link to="/manuls">Manuls</Link>
+          {!currentUser && (
+            <>
+              <Link to="/login">Login</Link>
+              <Link to="/register">Register</Link>
+            </>
+          )}
+          {currentUser && role === 'admin' && (
+            <>
+              <Link to="/admin">Admin</Link>
+              <button type="button" className="button buttonSecondary" onClick={handleLogout}>
+                Logout
+              </button>
+            </>
+          )}
+          {currentUser && role === 'user' && (
+            <button type="button" className="button buttonSecondary" onClick={handleLogout}>
+              Logout
+            </button>
+          )}
+        </div>
+      </div>
     </nav>
   )
 }

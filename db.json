@@ -32,6 +32,18 @@
       "likesCount": 20,
       "favoritesCount": 8,
       "createdAt": "2024-02-01"
+    },
+    {
+      "name": "Name",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Manul_close.jpg",
+      "shortDescription": "Short ",
+      "longStory": "long",
+      "locationType": "ZOO",
+      "region": "here",
+      "likesCount": 1,
+      "favoritesCount": 0,
+      "createdAt": "2026-01-30",
+      "id": 3
     }
   ],
   "users": [
@@ -89,6 +101,13 @@
       "type": "LIKE",
       "createdAt": "2026-01-30T05:36:58.158Z",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "manulId": 3,
+      "type": "LIKE",
+      "createdAt": "2026-01-30T06:15:12.055Z",
+      "id": 4
     }
   ]
 }

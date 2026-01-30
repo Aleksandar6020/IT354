@@ -25,32 +25,30 @@ function RegisterPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Email
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="formRow">
+          <label className="label">Email</label>
+          <input
+            className="input"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-        <div>
-          <label>
-            Password
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </label>
+        <div className="formRow">
+          <label className="label">Password</label>
+          <input
+            className="input"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
-        <button type="submit">Register</button>
+        <button className="button" type="submit">Register</button>
       </form>
     </div>
   )

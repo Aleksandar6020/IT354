@@ -93,74 +93,84 @@ function AdminPage() {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Admin panel</h1>
 
       <h2>{editingId ? 'Edit manul' : 'Create manul'}</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Name
-            <input name="name" value={form.name} onChange={handleChange} required />
-          </label>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="formRow">
+          <label className="label">Name</label>
+          <input className="input" name="name" value={form.name} onChange={handleChange} required />
         </div>
-        <div>
-          <label>
-            Photo URL
-            <input name="photoUrl" value={form.photoUrl} onChange={handleChange} required />
-          </label>
+        <div className="formRow">
+          <label className="label">Photo URL</label>
+          <input
+            className="input"
+            name="photoUrl"
+            value={form.photoUrl}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div>
-          <label>
-            Short description
-            <input
-              name="shortDescription"
-              value={form.shortDescription}
-              onChange={handleChange}
-              required
-            />
-          </label>
+        <div className="formRow">
+          <label className="label">Short description</label>
+          <input
+            className="input"
+            name="shortDescription"
+            value={form.shortDescription}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div>
-          <label>
-            Long story
-            <textarea name="longStory" value={form.longStory} onChange={handleChange} required />
-          </label>
+        <div className="formRow">
+          <label className="label">Long story</label>
+          <textarea
+            className="input"
+            name="longStory"
+            value={form.longStory}
+            onChange={handleChange}
+            required
+          />
         </div>
-        <div>
-          <label>
-            Location type
-            <select name="locationType" value={form.locationType} onChange={handleChange}>
-              <option value="ZOO">ZOO</option>
-              <option value="WILD">WILD</option>
-            </select>
-          </label>
+        <div className="formRow">
+          <label className="label">Location type</label>
+          <select
+            className="input"
+            name="locationType"
+            value={form.locationType}
+            onChange={handleChange}
+          >
+            <option value="ZOO">ZOO</option>
+            <option value="WILD">WILD</option>
+          </select>
         </div>
-        <div>
-          <label>
-            Region (optional)
-            <input name="region" value={form.region} onChange={handleChange} />
-          </label>
+        <div className="formRow">
+          <label className="label">Region (optional)</label>
+          <input className="input" name="region" value={form.region} onChange={handleChange} />
         </div>
-        <button type="submit">{editingId ? 'Save' : 'Create'}</button>
+        <button className="button" type="submit">{editingId ? 'Save' : 'Create'}</button>
         {editingId && (
-          <button type="button" onClick={handleCancel}>
+          <button className="button buttonSecondary" type="button" onClick={handleCancel}>
             Cancel
           </button>
         )}
       </form>
 
       <h2>Manuls</h2>
-      <div>
+      <div className="table">
         {manuls.map((manul) => (
-          <div key={manul.id}>
-            <strong>{manul.name}</strong> — {manul.locationType}{' '}
-            <button type="button" onClick={() => handleEdit(manul)}>
+          <div className="row" key={manul.id}>
+            <div className="rowMain">
+              <strong>{manul.name}</strong> — {manul.locationType}
+            </div>
+            <div className="rowActions">
+              <button className="button buttonSecondary" type="button" onClick={() => handleEdit(manul)}>
               Edit
-            </button>{' '}
-            <button type="button" onClick={() => handleDelete(manul.id)}>
+              </button>
+              <button className="button buttonDanger" type="button" onClick={() => handleDelete(manul.id)}>
               Delete
-            </button>
+              </button>
+            </div>
           </div>
         ))}
       </div>

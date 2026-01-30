@@ -56,19 +56,25 @@ function ManulDetailsPage() {
     }
   }
 
-  if (!manul) {
-    return <p>Loading...</p>
-  }
-
   return (
-    <div>
-      <h1>{manul.name}</h1>
-      <img src={manul.photoUrl} alt={manul.name} />
-      <p>{manul.longStory}</p>
-      <p>Likes: {manul.likesCount}</p>
-      <button type="button" onClick={handleLike}>
-        {liked ? 'Unlike' : 'Like'}
-      </button>
+    <div className="container">
+      {!manul ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h1>{manul.name}</h1>
+          <div className="details">
+            <img className="detailsImage" src={manul.photoUrl} alt={manul.name} />
+            <div className="detailsBody">
+              <p>{manul.longStory}</p>
+              <p>Likes: {manul.likesCount}</p>
+              <button className="button" type="button" onClick={handleLike}>
+                {liked ? 'Unlike' : 'Like'}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

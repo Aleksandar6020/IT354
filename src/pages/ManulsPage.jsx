@@ -15,15 +15,15 @@ function ManulsPage() {
   }, [])
 
   return (
-    <div>
+    <div className="container">
       <h1>Manuls</h1>
-      <div>
+      <div className="cardGrid">
         {manuls.map((manul) => (
-          <div key={manul.id}>
+          <div className="card" key={manul.id}>
             <h3>{manul.name}</h3>
             <p>{manul.shortDescription}</p>
             <p>Likes: {manul.likesCount}</p>
-            <Link to={`/manuls/${manul.id}`}>Open</Link>
+            <Link className="button" to={`/manuls/${manul.id}`}>Open</Link>
           </div>
         ))}
       </div>
